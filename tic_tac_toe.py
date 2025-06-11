@@ -41,8 +41,8 @@ def start():
     board = [[1,2,3],[4,5,6],[7,8,9]]
     played = 0
     toggle = True
+    prints(board)
     while(played < 9):
-        prints(board)
         if toggle:
             board = player("X",board)
             played += 1
@@ -51,6 +51,8 @@ def start():
             toggle = True
             board = player("O",board)
             played += 1
+        prints(board)
         check(board)
+    print("Draw")
 
 start()
